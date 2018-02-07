@@ -1,8 +1,12 @@
 {
-    "name": "internations/http-mock",
+    "name": "kiliansch/http-mock",
     "description": "Mock HTTP requests on the server side in your PHP unit tests",
     "license": "MIT",
-    "authors": [
+   "authors": [
+        {
+           "name": "Kilian Schuster",
+           "email": "kilian@diggr.net"
+        },
         {
             "name": "Lars Strojny",
             "email": "lars.strojny@internations.org"
