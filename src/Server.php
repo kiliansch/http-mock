@@ -1,12 +1,12 @@
 <?php
 namespace InterNations\Component\HttpMock;
 
-use Guzzle\Http\Client;
-use Guzzle\Common\Event;
+use Guzzle\Http\Curl\CurlException;
+use Guzzle\Service\Client;
 use hmmmath\Fibonacci\FibonacciFactory;
+use Symfony\Component\EventDispatcher\Event;
 use Symfony\Component\Process\Process;
 use RuntimeException;
-use Guzzle\Http\Exception\CurlException;
 
 class Server extends Process
 {
@@ -33,9 +33,9 @@ class Server extends Process
         $this->setTimeout(null);
     }
 
-    public function start(callable $callback = null)
+    public function start(callable $callback = null, array $env = array())
     {
-        parent::start($callback);
+        parent::start($callback, $env);
 
         $this->pollWait();
     }
